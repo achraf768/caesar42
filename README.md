@@ -473,7 +473,7 @@ npm -v
 
 ### Getting Started
 
-Run the following command to install the necessary testing library.
+Run the following command to install the necessary testing library in the project folder.
 
 ```bash
 npm i
