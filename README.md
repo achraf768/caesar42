@@ -16,7 +16,7 @@ PS: There's no need to feel pressured; our intention is not to set a trap. The o
 
 ## Delivery instructions
 
-Clone the repository and add all the functions in the specified files. Send us by email (paul@klaq.io) the link of your project before the due date (indicated in the email). Your project must be on a git repository, cleaned of any working files.
+Clone the repository and add all the functions in the specified files. Send us by email (paul@klaq.io) a zip of your project before the due date (indicated in the email). Your project must be containing all the files, cleaned of any working files.
 
 ## Description of the problem
 
