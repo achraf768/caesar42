@@ -330,7 +330,7 @@ In the `utils/invoice.js` file, create a function named `getInvoices`. This func
 
 ```javascript
 // utils/invoice.js
-function getInvoices() {
+async function getInvoices() {
     try {
       // fetch the invoices from the "https://api.klaq.io/intern/invoices" url
       // return the data
