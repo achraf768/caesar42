@@ -357,6 +357,50 @@ console.log("Invoices for J:", invoicesForJ);
 
 ### * Task 6
 
+In the `invoice.js` file, create a function named `getInvoicesByStatus`. This function should return the invoices in the following order: accepted -> pending -> rejected.
+
+```javascript
+// invoice.js
+function getInvoicesOrderedByStatus(invoices) {
+  // Take an invoice object list as a parameter
+  // Find the invoices ordered by status accepted, pending, rejected
+  // Return the result
+}
+```
+
+#### Example
+
+```json
+[
+  {
+    "id": 1,
+    "number": "INV001",
+    "status": "accepted"
+    // Add other properties as needed
+  },
+  {
+    "id": 2,
+    "number": "INV002",
+    "status": "pending"
+    // Add other properties as needed
+  },
+  {
+    "id": 3,
+    "number": "INV002",
+    "status": "rejected"
+    // Add other properties as needed
+  },
+  {
+    "id": 4,
+    "number": "INV002",
+    "status": "pending"
+    // Add other properties as needed
+  }
+]
+```
+
+### * Task 7
+
 In the `invoice.js` file, create a function named `getInvoices`. This function should return the data from the API call to "https://api.klaq.io/intern/invoices".
 
 ```javascript
