@@ -46,13 +46,15 @@ We are dealing with an array of invoice objects, and the task is to extract cruc
         "name": "Product A",
         "desc": "Description for Product A",
         "price": 50,
-        "vta": 10
+        "vta": 10,
+        "quantity": 1,
       },
       {
         "name": "Product B",
         "desc": "Description for Product B",
         "price": 30,
-        "vta": 20
+        "vta": 20,
+        "quantity": 1,
       }
     ]
   },
@@ -68,7 +70,8 @@ We are dealing with an array of invoice objects, and the task is to extract cruc
         "name": "Product C",
         "desc": "Description for Product C",
         "price": 75,
-        "vta": 5
+        "vta": 5,
+        "quantity": 1,
       }
     ]
   }
@@ -77,10 +80,10 @@ We are dealing with an array of invoice objects, and the task is to extract cruc
 
 ### * Task 1
 
-In the `utils/invoice.js` file, develop a function named `getInvoiceSubtotal`. This function should take an invoice object as a parameter and return the total amount for that specific invoice.
+In the `invoice.js` file, develop a function named `getInvoiceSubtotal`. This function should take an invoice object as a parameter and return the total amount for that specific invoice.
 
 ```javascript
-// utils/invoice.js
+// invoice.js
 function getInvoiceSubtotal(invoice) {
     // Take an invoice object as a parameter
     // Find the subtotal
@@ -104,13 +107,15 @@ const exampleInvoice = {
             "name": "Product A",
             "desc": "Description for Product A",
             "price": 75,
-            "tax": 5
+            "tax": 5,
+            "quantity": 1,
         },
         {
             "name": "Product B",
             "desc": "Description for Product B",
             "price": 30,
-            "tax": 5
+            "tax": 5,
+            "quantity": 1,
         }
     ]
 };
@@ -125,11 +130,11 @@ console.log(`Invoice Subtotal: ${invoiceSubtotal}€`);
 
 ### * Task 2
 
-In the `utils/invoice.js` file, develop a function named `getInvoiceTax`. This function should take an invoice object as a parameter and return the total tax amount for that invoice. Note that the tax properties in the product objects within the invoice correspond to a percentage. 
+In the `invoice.js` file, develop a function named `getInvoiceTax`. This function should take an invoice object as a parameter and return the total tax amount for that invoice. Note that the tax properties in the product objects within the invoice correspond to a percentage. 
 💡 For instance, if a product's price is 100€ and the tax is 20%, the calculated tax amount would be 20€.
 
 ```javascript
-// utils/invoice.js
+// invoice.js
 function getInvoiceTaxes(invoice) {
     // Take an invoice object as a parameter
     // Find the taxes amount
@@ -153,13 +158,15 @@ const exampleInvoice = {
             "name": "Product A",
             "desc": "Description for Product A",
             "price": 75,
-            "tax": 20
+            "tax": 20,
+            "quantity": 1,
         },
         {
             "name": "Product B",
             "desc": "Description for Product B",
             "price": 30,
-            "tax": 10
+            "tax": 10,
+            "quantity": 1,
         }
     ]
 };
@@ -174,10 +181,10 @@ console.log(`Invoice Taxes: ${invoiceTaxes}€`);
 
 ### * Task 3
 
-In the `utils/invoice.js` file, create a function named `getInvoiceTotal` that accepts an invoice object as a parameter and returns the total amount for that invoice.
+In the `invoice.js` file, create a function named `getInvoiceTotal` that accepts an invoice object as a parameter and returns the total amount for that invoice.
 
 ```javascript
-// utils/invoice.js
+// invoice.js
 function getInvoiceTotal(invoice) {
     // Take an invoice object as a parameter
     // Find the total amount
@@ -201,13 +208,15 @@ const exampleInvoice = {
             "name": "Product A",
             "desc": "Description for Product A",
             "price": 75,
-            "tax": 20
+            "tax": 20,
+            "quantity": 1,
         },
         {
             "name": "Product B",
             "desc": "Description for Product B",
             "price": 30,
-            "tax": 10
+            "tax": 10,
+            "quantity": 1,
         }
     ]
 };
@@ -222,11 +231,11 @@ console.log(`Invoice Total: ${invoiceTotal}€`);
 
 ### * Task 4
 
-In the `utils/invoice.js` file, establish a function called `getInvoicesOverdue`. This function should take a list of invoice object and a date as a parameter and provide a list of overdue invoices.
+In the `invoice.js` file, establish a function called `getInvoicesOverdue`. This function should take a list of invoice object and a date as a parameter and provide a list of overdue invoices.
 💡 An overdue invoice is one where the validUntil date has already passed the date parameter.
 
 ```javascript
-// utils/invoice.js
+// invoice.js
 function getInvoicesOverdue(invoices, date) {
     // Take an invoice object list as a parameter
     // Find the overdue invoices
@@ -269,10 +278,10 @@ console.log("Overdue Invoices:", overdueInvoices3.length);
 
 ### * Task 5
 
-In the `utils/invoice.js` file, create a function named `getInvoicesMatchingCustomer`. This function should take a list of invoice objects and a string as parameters, filtering and returning a list of invoice objects based on the specified customer property.
+In the `invoice.js` file, create a function named `getInvoicesMatchingCustomer`. This function should take a list of invoice objects and a string as parameters, filtering and returning a list of invoice objects based on the specified customer property.
 
 ```javascript
-// utils/invoice.js
+// invoice.js
 function getInvoicesMatchingCustomer(invoices, string) {
     // Take an invoice object list as a parameter
     // Find the invoices matching the customer property
@@ -326,10 +335,10 @@ console.log("Invoices for John:", invoicesForJohn);
 
 ### * Task 6
 
-In the `utils/invoice.js` file, create a function named `getInvoices`. This function should return the data from the API call to "https://api.klaq.io/intern/invoices".
+In the `invoice.js` file, create a function named `getInvoices`. This function should return the data from the API call to "https://api.klaq.io/intern/invoices".
 
 ```javascript
-// utils/invoice.js
+// invoice.js
 async function getInvoices() {
     try {
       // fetch the invoices from the "https://api.klaq.io/intern/invoices" url
