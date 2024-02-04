@@ -278,11 +278,11 @@ console.log("Overdue Invoices:", overdueInvoices3.length);
 
 ### * Task 5
 
-In the `invoice.js` file, create a function named `getInvoicesMatchingCustomer`. This function should take a list of invoice objects and a string as parameters, it should check if the string is included based on the specified customer property of each invoice and returning a list of invoice objects.
+In the `invoice.js` file, create a function named `getInvoicesMatchingCharacter`. This function should take a list of invoice objects and a string as parameters, it should check if the string is included based on the specified customer property of each invoice and returning a list of invoice objects.
 
 ```javascript
 // invoice.js
-function getInvoicesMatchingCustomer(invoices, string) {
+function getInvoicesMatchingCharacter(invoices, string) {
     // Take an invoice object list as a parameter
     // Find the invoices matching the customer property
     // Return the result
@@ -315,7 +315,7 @@ const invoicesList = [
     // Add more invoices as needed
 ];
 
-const invoicesForJohn = getInvoicesMatchingCustomer(invoicesList, "John");
+const invoicesForJohn = getInvoicesMatchingCharacter(invoicesList, "John");
 console.log("Invoices for John:", invoicesForJohn);
 // => Invoices for John: [
     {
@@ -331,8 +331,8 @@ console.log("Invoices for John:", invoicesForJohn);
         // other properties...
     }
 ]
-const invoicesForJ = getInvoicesMatchingCustomer(invoicesList, "J");
-console.log("Invoices for John:", invoicesForJohn);
+const invoicesForJ = getInvoicesMatchingCharacter(invoicesList, "J");
+console.log("Invoices for J:", invoicesForJ);
 // => Invoices for J: [
     {
         "id": 1,
