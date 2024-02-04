@@ -178,7 +178,7 @@ In the `utils/invoice.js` file, create a function named `getInvoiceTotal` that a
 
 ```javascript
 // utils/invoice.js
-function getInvoiceTaxes(invoice) {
+function getInvoiceTotal(invoice) {
     // Take an invoice object as a parameter
     // Find the total amount
     // Return the result
