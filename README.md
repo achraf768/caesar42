@@ -26,7 +26,7 @@ At Klaq, we've got a billing tool. Yeah, we've got to juggle creating, finding, 
 
 ### Guidelines
 
-You have to use JavaScript, with any libraries or tool you need. Keep it simple!
+You have to use JavaScript, with any libraries or tool you need. if you don't succeed in an exercise, don't hesitate to move on to the next one and leave a comment about your thoughts on the problem. Keep it simple!
 
 ## Problem
 
@@ -75,7 +75,7 @@ We are dealing with an array of invoice objects, and the task is to extract cruc
 ]
 ```
 
-### Task 1
+### * Task 1
 
 In the `utils/invoice.js` file, develop a function named `getInvoiceSubtotal`. This function should take an invoice object as a parameter and return the total amount for that specific invoice.
 
@@ -123,7 +123,7 @@ console.log(`Invoice Subtotal: ${invoiceSubtotal}€`);
 // => Invoice Subtotal: 105€
 ```
 
-### Task 2
+### * Task 2
 
 In the `utils/invoice.js` file, develop a function named `getInvoiceTax`. This function should take an invoice object as a parameter and return the total tax amount for that invoice. Note that the tax properties in the product objects within the invoice correspond to a percentage. 
 💡 For instance, if a product's price is 100€ and the tax is 20%, the calculated tax amount would be 20€.
@@ -172,7 +172,7 @@ console.log(`Invoice Taxes: ${invoiceTaxes}€`);
 // => Invoice Taxes: 18€
 ```
 
-### Task 3
+### * Task 3
 
 In the `utils/invoice.js` file, create a function named `getInvoiceTotal` that accepts an invoice object as a parameter and returns the total amount for that invoice.
 
@@ -220,16 +220,16 @@ console.log(`Invoice Total: ${invoiceTotal}€`);
 // => Invoice Total: 123€
 ```
 
-### Task 4
+### * Task 4
 
-In the `utils/invoice.js` file, establish a function called `getInvoicesOverdue`. This function should take a list of invoice object as a parameter and provide a list of overdue invoices.
-💡 An overdue invoice is one where the validUntil date has already passed.
+In the `utils/invoice.js` file, establish a function called `getInvoicesOverdue`. This function should take a list of invoice object and a date as a parameter and provide a list of overdue invoices.
+💡 An overdue invoice is one where the validUntil date has already passed the date parameter.
 
 ```javascript
 // utils/invoice.js
-function getInvoicesOverdue(invoices) {
+function getInvoicesOverdue(invoices, date) {
     // Take an invoice object list as a parameter
-    // Find the total amount
+    // Find the overdue invoices
     // Return the result
 }
 ```
@@ -254,15 +254,100 @@ const invoicesList = [
     // Add more invoices as needed
 ];
 
-const overdueInvoices = getInvoicesOverdue(invoicesList);
+const overdueInvoices = getInvoicesOverdue(invoicesList, "2022-02-01");
 console.log("Overdue Invoices:", overdueInvoices.length);
+// => Overdue Invoices: 1
+
+const overdueInvoices2 = getInvoicesOverdue(invoicesList, "2022-03-19");
+console.log("Overdue Invoices:", overdueInvoices2.length);
 // => Overdue Invoices: 2
+
+const overdueInvoices3 = getInvoicesOverdue(invoicesList, "2021-03-19");
+console.log("Overdue Invoices:", overdueInvoices3.length);
+// => Overdue Invoices: 0
 ```
 
+### * Task 5
 
+In the `utils/invoice.js` file, create a function named `getInvoicesMatchingCustomer`. This function should take a list of invoice objects and a string as parameters, filtering and returning a list of invoice objects based on the specified customer property.
+
+```javascript
+// utils/invoice.js
+function getInvoicesMatchingCustomer(invoices, string) {
+    // Take an invoice object list as a parameter
+    // Find the invoices matching the customer property
+    // Return the result
+}
+```
+
+#### Example
+
+```javascript
+// Example usage
+const invoicesList = [
+    {
+        "id": 1,
+        "number": "INV001",
+        "customer": "John Doe",
+        // other properties...
+    },
+    {
+        "id": 2,
+        "number": "INV002",
+        "customer": "John Smith",
+        // other properties...
+    },
+    {
+        "id": 3,
+        "number": "INV002",
+        "customer": "Jane Monroe",
+        // other properties...
+    },
+    // Add more invoices as needed
+];
+
+const invoicesForJohn = getInvoicesForCustomer(invoicesList, "John");
+console.log("Invoices for John:", invoicesForJohn);
+// => Invoices for John: [
+    {
+        "id": 1,
+        "number": "INV001",
+        "customer": "John Doe",
+        // other properties...
+    },
+    {
+        "id": 3,
+        "number": "INV002",
+        "customer": "John Smith",
+        // other properties...
+    }
+]
+```
+
+### * Task 6
+
+In the `utils/invoice.js` file, create a function named `getInvoices`. This function should return the data from the API call to "https://api.klaq.io/intern/invoices".
+
+```javascript
+// utils/invoice.js
+function getInvoices() {
+    try {
+      // fetch the invoices from the "https://api.klaq.io/intern/invoices" url
+      // return the data
+    } catch (error) {
+      console.error(error);
+    }
+}
+```
 
 ### Bonus
 
+Show the invoice list fetched using the `getInvoices` function in a table using any libraries or frameworks, presenting the following details:
+
+| Invoice Number | Customer | Issue Date | Due Date | Taxes (€) | Amount (€) |
+| -------------- | -------- | ---------- | -------- | --------- | ---------- |
+
+Additionally, you can include an input field that allows you to type the customer's name for personalized information display.
 
 
 
