@@ -315,13 +315,35 @@ const invoicesList = [
     // Add more invoices as needed
 ];
 
-const invoicesForJohn = getInvoicesForCustomer(invoicesList, "John");
+const invoicesForJohn = getInvoicesMatchingCustomer(invoicesList, "John");
 console.log("Invoices for John:", invoicesForJohn);
 // => Invoices for John: [
     {
         "id": 1,
         "number": "INV001",
         "customer": "John Doe",
+        // other properties...
+    },
+    {
+        "id": 3,
+        "number": "INV002",
+        "customer": "John Smith",
+        // other properties...
+    }
+]
+const invoicesForJ = getInvoicesMatchingCustomer(invoicesList, "J");
+console.log("Invoices for John:", invoicesForJohn);
+// => Invoices for J: [
+    {
+        "id": 1,
+        "number": "INV001",
+        "customer": "John Doe",
+        // other properties...
+    },
+    {
+        "id": 2,
+        "number": "INV002",
+        "customer": "John Smith",
         // other properties...
     },
     {
