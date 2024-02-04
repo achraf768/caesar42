@@ -30,7 +30,7 @@ You have to use JavaScript, with any libraries or tool you need. if you don't su
 
 ## Problem
 
-We are dealing with an array of invoice objects, and the task is to extract crucial information from this array. Each invoice object consists of various properties such as id, number, customer, issuedOn, validUntil, status, and products. Within each product, there are properties like price, vta, desc, and name.
+We are dealing with an array of invoice objects, and the task is to extract crucial information from this array. Each invoice object consists of various properties such as id, number, customer, issuedOn, validUntil, status, and products. Within each product, there are properties like price, tax, desc, quantity and name.
 
 ```json
 [
