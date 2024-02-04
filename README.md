@@ -278,7 +278,7 @@ console.log("Overdue Invoices:", overdueInvoices3.length);
 
 ### * Task 5
 
-In the `invoice.js` file, create a function named `getInvoicesMatchingCustomer`. This function should take a list of invoice objects and a string as parameters, filtering and returning a list of invoice objects based on the specified customer property.
+In the `invoice.js` file, create a function named `getInvoicesMatchingCustomer`. This function should take a list of invoice objects and a string as parameters, it should check if the string is included based on the specified customer property of each invoice and returning a list of invoice objects.
 
 ```javascript
 // invoice.js
