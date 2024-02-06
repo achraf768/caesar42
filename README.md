@@ -428,13 +428,13 @@ console.log(invoicesOrderedByStatus);
 
 ### \* Task 7
 
-In the `invoice.js` file, create a function named `getInvoices`. This function should return the data from the API call to "https://api.klaq.io/intern/invoices".
+In the `invoice.js` file, create a function named `getInvoices`. This function should return the data from the API call to "https://api.klaq.io/api/v1/intern/invoices".
 
 ```javascript
 // invoice.js
 async function getInvoices() {
   try {
-    // fetch the invoices from the "https://api.klaq.io/intern/invoices" url
+    // fetch the invoices from the "https://api.klaq.io/api/v1/intern/invoices" url
     // return the data
   } catch (error) {
     console.error(error);
