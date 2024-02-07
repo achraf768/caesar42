@@ -5,10 +5,9 @@ const {
   getInvoiceTotal,
   getInvoicesOverdue,
   getInvoicesMatchingCharacter,
-  getInvoicesByStatus,
+  getInvoicesOrderedByStatus, 
   getInvoices,
 } = require("../invoice");
-
 const exampleInvoices = [
   {
     id: 1,
