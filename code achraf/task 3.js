@@ -1,7 +1,7 @@
-// Task 3
-
-// Fonction pour calculer le montant total de la facture
-function getInvoiceTotal(invoice) {
+  // Question 3
+  
+  // Fonction pour calculer le montant total de la facture
+  function getInvoiceTotal(invoice) {
     // Vérifie si l'objet de facture est défini
     if (!invoice) {
       return 0;
@@ -12,3 +12,4 @@ function getInvoiceTotal(invoice) {
   
     return total;
   }
+  
